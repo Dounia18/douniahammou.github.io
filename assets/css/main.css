@@ -2465,8 +2465,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #1985a1;
+			color: #1985a1 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2474,8 +2474,8 @@ input, select, textarea {
 		input[type="button"]:active,
 		.button:active {
 			background-color: rgba(73, 191, 157, 0.1);
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #1985a1;
+			color: #1985a1 !important;
 		}
 
 		input[type="submit"].icon,
