@@ -1,0 +1,266 @@
+<html>
+<head>
+<meta charset="UTF-8"> <!-- Specifies UTF-8 encoding -->
+
+<link rel="stylesheet" type="text/css" href="css_files/style.css">
+
+<script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
+</head>
+<body>
+<div class="sidebar">
+
+    <h2>MENU</h2>
+
+
+
+    <div class="menu-item" onclick="toggleMenu('contrast_detection')">Contrast Detection</div>
+
+    <div id="contrast_detection" class="sub-menu">
+
+
+
+        <div class="sub-menu-item" onclick="toggleMenu('achromatic_contrast_detection')">Achromatic Stimuli</div>
+
+            <div id="achromatic_contrast_detection" class="sub-menu">
+
+                <a href="contrast_detection_spatial_frequency_achromatic_gabor_patch.html"><div class="sub-menu-item">Spatial Frequency - Gabor Patch</div></a>
+
+                <a href="contrast_detection_spatial_frequency_achromatic_band_limited_noise.html"><div class="sub-menu-item">Spatial Frequency - Band Limited Noise</div></a>
+
+                <a href="contrast_detection_stimuli_size_achromatic_gabor_patch.html"><div class="sub-menu-item">Stimuli Size</div></a>
+
+            </div>
+
+
+
+        <div class="sub-menu-item" onclick="toggleMenu('chromatic_contrast_detection')">Chromatic Stimuli</div>
+
+            <div id="chromatic_contrast_detection" class="sub-menu">
+
+                <a href="contrast_detection_spatial_frequency_red_green_gabor_patch.html"><div class="sub-menu-item">Spatial Frequency - Red-Green Gabor Patch</div></a>
+
+                <a href="contrast_detection_spatial_frequency_yellow_violet_gabor_patch.html"><div class="sub-menu-item">Spatial Frequency - Yellow-Violet Gabor Patch</div></a>
+
+                <a href="contrast_detection_spatial_frequency_red_green_band_limited_noise.html"><div class="sub-menu-item">Spatial Frequency - Red-Green Band Limited Noise</div></a>
+
+                <a href="contrast_detection_spatial_frequency_yellow_violet_band_limited_noise.html"><div class="sub-menu-item">Spatial Frequency - Yellow-Violet Band Limited Noise</div></a>
+
+            </div>
+
+
+
+    </div>
+
+
+
+    <div class="menu-item" onclick="toggleMenu('contrast_masking')">Contrast Masking</div>
+
+    <div id="contrast_masking" class="sub-menu">
+
+        <a href="contrast_masking_phase_coherent_masking.html"><div class="sub-menu-item">Phase Coherent Masking</div></a>
+
+        <a href="contrast_masking_phase_incoherent_masking.html"><div class="sub-menu-item">Phase Incoherent Masking</div></a>
+
+    </div>
+
+
+
+    <div class="menu-item" onclick="toggleMenu('luminance_masking')">Luminance Masking</div>
+
+    <div id="luminance_masking" class="sub-menu">
+
+        <a href="luminance_masking.html"><div class="sub-menu-item">No Encoding</div></a>
+
+        <a href="luminance_masking_pu21_encoding.html"><div class="sub-menu-item">PU21 Encoding</div></a>
+
+        <a href="luminance_masking_pq_encoding.html"><div class="sub-menu-item">PQ Encoding</div></a>
+
+        <a href="luminance_masking_hlg_encoding.html"><div class="sub-menu-item">HLG Encoding</div></a>
+
+    </div>
+
+
+
+    <!-- <a href="contrast_constancy_contrast_matching.html"><div class="menu-item" onclick="toggleMenu('menu3')">Contrast Constancy - Contrast Matching</div></a> -->
+
+</div>
+<div class=other_content>
+<h2>Contrast Detection - Spatial Frequency - Red-Green Gabor Patch</h2>
+<p> The plots are generated with Plotly JS, please wait for few seconds for all the plots to be generated. </p>
+<p> The countour plots are dynamic, you can hover over them and read the results, or zoom in and zoom out. </p>
+<p> Each contour plot corresponds to the metric "quality" predictions for the "Contrast Detection - Spatial Frequency - Red-Green Gabor Patch" test, while the red line corresponds to the ground truth. The test stimuli examples can be found <a href=contrast_detection_spatial_frequency_red_green_gabor_patch_preview.html>here</a>. </p>
+<div class=image-container>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_colorvideovdp>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_flip>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_fsimc>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_vsi>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_mdsi>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_haarpsi>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_wadiqam>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_dists>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_ahiq>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_topiq>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_lpips-alex>
+</div>
+<div id=contrast_detection_-_spatial_frequency_-_red-green_gabor_patch_lpips-vgg>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="js_files/script_contrast_detection_spatial_frequency_red_green_gabor_patch.js"></script>
+
+
+<script type="text/javascript">
+
+
+
+    // Select all images with the 'toggle-image' class
+
+    const images = document.querySelectorAll('.toggle-image');
+
+
+
+    // Add event listeners to each image for mouse down and mouse up events
+
+    images.forEach((image) => {
+
+        // Store the original and alternate image URLs from the dataset attributes
+
+        const originalSrc = image.dataset.original;
+
+        const alternateSrc = image.dataset.alternate;
+
+
+
+        // When the user clicks (mouse down), change the image to the alternate
+
+        image.addEventListener('mousedown', () => {
+
+            image.src = alternateSrc;
+
+        });
+
+
+
+        // When the user releases the click (mouse up), revert back to the original image
+
+        image.addEventListener('mouseup', () => {
+
+            image.src = originalSrc;
+
+        });
+
+
+
+        // Also revert to the original image if the user moves the mouse out of the image while holding the click
+
+        image.addEventListener('mouseleave', () => {
+
+            image.src = originalSrc;
+
+        });
+
+    });
+
+
+
+    // Select all video with the 'toggle-video' class
+
+    const videos = document.querySelectorAll('.toggle-video');
+
+
+
+    // Add event listeners to each image for mouse down and mouse up events
+
+    videos.forEach((video) => {
+
+        // Store the original and alternate image URLs from the dataset attributes
+
+        const originalSrc = video.dataset.original;
+
+        const alternateSrc = video.dataset.alternate;
+
+
+
+        // When the user clicks (mouse down), change the image to the alternate
+
+        video.addEventListener('mousedown', () => {
+
+            video.src = alternateSrc;
+
+            video.loop = true;
+
+            video.load();
+
+            video.play();
+
+        });
+
+
+
+        // When the user releases the click (mouse up), revert back to the original image
+
+        video.addEventListener('mouseup', () => {
+
+            video.src = originalSrc;
+
+            video.loop = true;
+
+            video.load();
+
+            video.play();
+
+        });
+
+
+
+        // Also revert to the original image if the user moves the mouse out of the image while holding the click
+
+        video.addEventListener('mouseleave', () => {
+
+            video.src = originalSrc;
+
+            video.loop = true;
+
+            video.load();
+
+            video.play();
+
+        });
+
+    });
+
+
+
+    function toggleMenu(menuId) {
+
+            var menu = document.getElementById(menuId);
+
+            if (menu.style.display === "block") {
+
+                menu.style.display = "none";
+
+            } else {
+
+                menu.style.display = "block";
+
+            }
+
+        }
+
+
+
+</script>
+
+    
+</body>
+</html>
